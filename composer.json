@@ -1,7 +1,7 @@
 {
     "name": "wxr/category-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony WXRFileBundle",
+    "description": "Symfony WXRCategoryBundle",
     "keywords": [ "wxr", "category" ],
     "license": "MIT",
     "authors": [
