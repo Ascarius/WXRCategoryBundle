@@ -34,6 +34,7 @@ class Category implements CategoryInterface
     /**
      * {@inheritdoc}
      */
+    public function setName($name)
     {
         $this->name = $name;
 
