@@ -23,5 +23,11 @@
         "psr-0": {
             "WXR\\Category": "src/"
         }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
     }
 }

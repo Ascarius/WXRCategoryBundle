@@ -9,6 +9,6 @@ use WXR\CategoryBundle\Model\Category as BaseCategory
 /**
  * WXR\CategoryBundle\Entity\Category
  */
-class Category extends BaseCategory
+abstract class Category extends BaseCategory
 {
 }

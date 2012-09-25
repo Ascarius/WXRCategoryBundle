@@ -1,6 +1,6 @@
 <?php
 
-namespace WXR\CategoryBundle\DependencyInjection;
+namespace WXR\CommonBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
