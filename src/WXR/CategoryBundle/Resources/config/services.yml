@@ -1,0 +1,23 @@
+parameters:
+    wxr_category.category.class: WXR\CategoryBundle\Entity\Category
+
+services:
+
+    wxr_category.category.manager:
+        class: WXR\CategoryBundle\Entity\CategoryManager
+        arguments: [@doctrine.orm.entity_manager, %wxr_category.category.class%]
+
+    wxr_category.category.form:
+        factory_service: form.factory
+        factory_method: create
+        class: Symfony\Component\Form\Form
+        arguments: [ @wxr_category.category.form.type ]
+
+    wxr_category.category.form.type:
+        class: WXR\CategoryBundle\Form\Type\CategoryType
+        arguments: [ %wxr_category.category.class% ]
+
+    wxr_category.category.form.handler:
+        class: WXR\CategoryBundle\Form\Handler\CategoryHandler
+        scope: request
+        arguments: [ @request, @wxr_category.category.form, @wxr_category.category.manager ]

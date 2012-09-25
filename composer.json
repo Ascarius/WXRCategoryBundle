@@ -1,0 +1,27 @@
+{
+    "name": "wxr/category-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony WXRFileBundle",
+    "keywords": [ "wxr", "category" ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lionel Gaillard",
+            "email": "lionel.gaillard@wxrstudios.com",
+            "homepage": "http://wxrstudios.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.1.*",
+        "wxr/common-bundle": "*"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-0": {
+            "WXR\\Category": "src/"
+        }
+    }
+}

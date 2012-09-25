@@ -1,0 +1,8 @@
+WXR\CategoryBundle\Entity\Category:
+    type: mappedSuperclass
+    fields:
+        name:
+            type: string
+            length: 255
+        description:
+            type: text
