@@ -18,8 +18,13 @@ class CategoryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('description')
+            ->add('name', 'text', array(
+                'label' => 'wxr_category.category.name'
+            ))
+            ->add('description', 'textarea', array(
+                'required' => false,
+                'label' => 'wxr_category.category.description'
+            ))
         ;
     }
 

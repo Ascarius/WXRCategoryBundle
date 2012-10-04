@@ -1,0 +1,5 @@
+wxr_category:
+    category:
+        name: Name
+        slug: Slug
+        description: Description
