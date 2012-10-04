@@ -1,3 +1,0 @@
-wxr_category_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: WXRCategoryBundle:Default:index }

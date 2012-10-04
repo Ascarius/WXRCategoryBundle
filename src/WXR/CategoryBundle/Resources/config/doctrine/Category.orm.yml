@@ -12,3 +12,4 @@ WXR\CategoryBundle\Entity\Category:
                     fields: [ name ]
         description:
             type: text
+            nullable: true
