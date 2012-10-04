@@ -27,6 +27,13 @@ interface CategoryInterface
     public function getName();
 
     /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug();
+
+    /**
      * Set description
      *
      * @param string $description

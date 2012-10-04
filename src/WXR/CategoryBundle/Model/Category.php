@@ -5,26 +5,31 @@ namespace WXR\CategoryBundle\Model;
 /**
  * WXR\CategoryBundle\Model\Category
  */
-class Category implements CategoryInterface
+abstract class Category implements CategoryInterface
 {
     /**
-     * @var integer $id
+     * @var integer
      */
     protected $id;
 
     /**
-     * @var string $name
+     * @var string
      */
     protected $name;
 
     /**
-     * @var string $description
+     * @var string
+     */
+    protected $slug;
+
+    /**
+     * @var string
      */
     protected $description;
 
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getId()
     {
@@ -32,7 +37,7 @@ class Category implements CategoryInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function setName($name)
     {
@@ -42,7 +47,7 @@ class Category implements CategoryInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getName()
     {
@@ -50,7 +55,15 @@ class Category implements CategoryInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * {@inheritDoc}
      */
     public function setDescription($description)
     {
@@ -60,7 +73,7 @@ class Category implements CategoryInterface
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function getDescription()
     {

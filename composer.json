@@ -13,15 +13,14 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.1.*",
-        "wxr/common-bundle": "*"
-    },
-    "require-dev": {
-
+        "symfony/framework-bundle": "2.1.*",
+        "gedmo/doctrine-extensions": "dev-master",
+        "stof/doctrine-extensions-bundle": "dev-master",
+        "wxr/common-bundle": "dev-master"
     },
     "autoload": {
         "psr-0": {
-            "WXR\\Category": "src/"
+            "WXR\\CategoryBundle": "src/"
         }
     },
     "minimum-stability": "dev",
