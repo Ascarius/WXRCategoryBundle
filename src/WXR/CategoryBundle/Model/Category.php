@@ -79,4 +79,12 @@ abstract class Category implements CategoryInterface
     {
         return $this->description;
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }
