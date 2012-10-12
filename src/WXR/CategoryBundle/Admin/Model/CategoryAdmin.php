@@ -42,7 +42,7 @@ abstract class CategoryAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('name', null, array(
+            ->addIdentifier('name', null, array(
                 'label' => 'wxr_category.category.name'
             ))
         ;
