@@ -28,6 +28,8 @@ abstract class Category implements CategoryInterface
     protected $description;
 
 
+    public function __construct() {}
+
     /**
      * {@inheritDoc}
      */
