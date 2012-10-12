@@ -8,8 +8,7 @@ WXR\CategoryBundle\Entity\Category:
             type: string
             length: 255
             gedmo:
-                slug:
-                    fields: [ name ]
+                slug: { fields: [ name ] }
         description:
             type: text
             nullable: true
