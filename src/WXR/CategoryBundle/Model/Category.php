@@ -57,6 +57,16 @@ abstract class Category implements CategoryInterface
     /**
      * {@inheritDoc}
      */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getSlug()
     {
         return $this->slug;

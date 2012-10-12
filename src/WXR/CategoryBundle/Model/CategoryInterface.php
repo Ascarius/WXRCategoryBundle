@@ -15,7 +15,7 @@ interface CategoryInterface
      * Set name
      *
      * @param string $name
-     * @return Category
+     * @return CategoryInterface
      */
     public function setName($name);
 
@@ -25,6 +25,14 @@ interface CategoryInterface
      * @return string
      */
     public function getName();
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return CategoryInterface
+     */
+    public function setSlug($slug);
 
     /**
      * Get slug
@@ -37,7 +45,7 @@ interface CategoryInterface
      * Set description
      *
      * @param string $description
-     * @return Category
+     * @return CategoryInterface
      */
     public function setDescription($description);
 
