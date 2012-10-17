@@ -2,6 +2,8 @@
 
 namespace WXR\CategoryBundle\Entity;
 
+use Doctrine\ORM\QueryBuilder;
+
 use WXR\CategoryBundle\Model\CategoryManagerInterface;
 use WXR\CommonBundle\Entity\BaseManager;
 
