@@ -20,7 +20,10 @@ class CategoryManager extends BaseManager implements CategoryManagerInterface
      */
     protected function buildOrderClause(QueryBuilder $qb, array $orderBy = null)
     {
-        $qb->addOrderBy('name' => 'ASC');
+        $default = array('name' => 'ASC');
+
+        $orderBy = $orderBy ?
+            array_merge($default, $orderBy) : $default;
 
         parent::buildOrderClause($qb, $orderBy);
     }
