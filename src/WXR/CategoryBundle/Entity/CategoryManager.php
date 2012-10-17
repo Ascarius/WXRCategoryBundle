@@ -14,4 +14,14 @@ class CategoryManager extends BaseManager implements CategoryManagerInterface
     {
         return $this->findOneBy(array('slug' => $slug));
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    protected function buildOrderClause(QueryBuilder $qb, array $orderBy = null)
+    {
+        $qb->addOrderBy('name' => 'ASC');
+
+        parent::buildOrderClause($qb, $orderBy);
+    }
 }
