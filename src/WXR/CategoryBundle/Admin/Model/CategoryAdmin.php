@@ -16,13 +16,8 @@ abstract class CategoryAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name', null, array(
-                'label' => 'wxr_category.category.name'
-            ))
-            ->add('description', null, array(
-                'required' => false,
-                'label' => 'wxr_category.category.description'
-            ))
+            ->add('name')
+            ->add('description', null, array('required' => false))
         ;
     }
 
@@ -42,9 +37,7 @@ abstract class CategoryAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('name', null, array(
-                'label' => 'wxr_category.category.name'
-            ))
+            ->addIdentifier('name')
         ;
     }
 }

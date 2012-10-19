@@ -1,4 +1,5 @@
 parameters:
+
     wxr_category.category.class: WXR\CategoryBundle\Entity\Category
 
 services:
