@@ -17,7 +17,7 @@ abstract class CategoryAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('description', null, array('required' => false, 'class' => 'wysiwyg'))
+            ->add('description', null, array('required' => false, 'attr' => array('class' => 'wysiwyg')))
         ;
     }
 
