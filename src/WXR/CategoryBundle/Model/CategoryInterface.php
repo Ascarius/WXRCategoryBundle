@@ -57,6 +57,21 @@ interface CategoryInterface
     public function getDescription();
 
     /**
+     * Set position
+     *
+     * @param integer $position
+     * @return CategoryInterface
+     */
+    public function setPosition($position);
+
+    /**
+     * Get position
+     *
+     * @return integer
+     */
+    public function getPosition();
+
+    /**
      * @return string
      */
     public function __toString();

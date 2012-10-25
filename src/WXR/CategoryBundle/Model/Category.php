@@ -27,6 +27,11 @@ abstract class Category implements CategoryInterface
      */
     protected $description;
 
+    /**
+     * @var integer
+     */
+    protected $position;
+
 
     public function __construct() {}
 
@@ -90,6 +95,24 @@ abstract class Category implements CategoryInterface
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPosition()
+    {
+        return $this->position;
     }
 
     /**

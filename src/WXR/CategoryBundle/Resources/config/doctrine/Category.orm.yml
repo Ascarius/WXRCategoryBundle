@@ -9,6 +9,10 @@ WXR\CategoryBundle\Entity\Category:
         name:
             type: string
             length: 255
+        position:
+            type: integer
+            gedmo:
+                - sortablePosition
         slug:
             type: string
             length: 255

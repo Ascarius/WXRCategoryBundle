@@ -13,11 +13,26 @@ abstract class CategoryAdmin extends Admin
     /**
      * {@inheritDoc}
      */
+    protected $datagridValues = array(
+        '_page' => 1,
+        '_sort_by' => 'position',
+        '_sort_order' => 'ASC'
+    );
+
+    /**
+     * {@inheritDoc}
+     */
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
             ->add('name')
-            ->add('description', null, array('required' => false, 'attr' => array('class' => 'wysiwyg span10', 'rows' => 8)))
+            ->add('description', null, array(
+                'required' => false,
+                'attr' => array('class' => 'wysiwyg span10', 'rows' => 8)
+            ))
+            ->add('position', 'integer', array(
+                'required' => false
+            ))
         ;
     }
 
