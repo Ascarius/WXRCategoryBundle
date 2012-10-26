@@ -30,9 +30,7 @@ abstract class CategoryAdmin extends Admin
                 'required' => false,
                 'attr' => array('class' => 'wysiwyg span10', 'rows' => 8)
             ))
-            ->add('position', 'integer', array(
-                'required' => false
-            ))
+            ->add('position')
         ;
     }
 
