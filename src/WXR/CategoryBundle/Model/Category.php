@@ -21,6 +21,7 @@ abstract class Category extends Tag implements CategoryInterface
     public function __construct()
     {
         parent::__construct();
+        $position = 0;
     }
 
     /**
