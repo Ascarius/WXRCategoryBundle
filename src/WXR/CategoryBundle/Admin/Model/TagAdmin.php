@@ -8,7 +8,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
 
-abstract class CategoryAdmin extends Admin
+abstract class TagAdmin extends Admin
 {
     /**
      * {@inheritDoc}
