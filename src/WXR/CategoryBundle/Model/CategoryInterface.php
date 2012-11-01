@@ -2,45 +2,8 @@
 
 namespace WXR\CategoryBundle\Model;
 
-interface CategoryInterface
+interface CategoryInterface extends TagInterface
 {
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId();
-
-    /**
-     * Set name
-     *
-     * @param string $name
-     * @return CategoryInterface
-     */
-    public function setName($name);
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName();
-
-    /**
-     * Set slug
-     *
-     * @param string $slug
-     * @return CategoryInterface
-     */
-    public function setSlug($slug);
-
-    /**
-     * Get slug
-     *
-     * @return string
-     */
-    public function getSlug();
-
     /**
      * Set description
      *
@@ -70,9 +33,4 @@ interface CategoryInterface
      * @return integer
      */
     public function getPosition();
-
-    /**
-     * @return string
-     */
-    public function __toString();
 }

@@ -5,23 +5,8 @@ namespace WXR\CategoryBundle\Model;
 /**
  * WXR\CategoryBundle\Model\Category
  */
-abstract class Category implements CategoryInterface
+abstract class Category extends Tag implements CategoryInterface
 {
-    /**
-     * @var integer
-     */
-    protected $id;
-
-    /**
-     * @var string
-     */
-    protected $name;
-
-    /**
-     * @var string
-     */
-    protected $slug;
-
     /**
      * @var string
      */
@@ -33,50 +18,9 @@ abstract class Category implements CategoryInterface
     protected $position;
 
 
-    public function __construct() {}
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getId()
+    public function __construct()
     {
-        return $this->id;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getSlug()
-    {
-        return $this->slug;
+        parent::__construct();
     }
 
     /**
@@ -113,13 +57,5 @@ abstract class Category implements CategoryInterface
     public function getPosition()
     {
         return $this->position;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function __toString()
-    {
-        return $this->getName();
     }
 }

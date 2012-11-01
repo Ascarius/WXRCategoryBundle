@@ -1,4 +1,4 @@
-WXR\CategoryBundle\Entity\Category:
+WXR\CategoryBundle\Entity\BaseCategory:
     type: mappedSuperclass
     id:
         id:
