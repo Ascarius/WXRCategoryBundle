@@ -4,10 +4,10 @@ namespace WXR\CategoryBundle\Entity;
 
 use Doctrine\ORM\QueryBuilder;
 
-use WXR\CategoryBundle\Model\CategoryManagerInterface;
+use WXR\CategoryBundle\Model\TagManagerInterface;
 use WXR\CommonBundle\Entity\BaseManager;
 
-class TagManager extends BaseManager implements CategoryManagerInterface
+class TagManager extends BaseManager implements TagManagerInterface
 {
     /**
      * {@inheritDoc}
