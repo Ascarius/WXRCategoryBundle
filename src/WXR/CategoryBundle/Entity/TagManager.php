@@ -7,7 +7,7 @@ use Doctrine\ORM\QueryBuilder;
 use WXR\CategoryBundle\Model\CategoryManagerInterface;
 use WXR\CommonBundle\Entity\BaseManager;
 
-class TagManager extends BaseManager implements TagManagerInterface
+class TagManager extends BaseManager implements CategoryManagerInterface
 {
     /**
      * {@inheritDoc}
