@@ -28,7 +28,7 @@ abstract class CategoryAdmin extends Admin
             ->add('name')
             ->add('description', null, array(
                 'required' => false,
-                'attr' => array('class' => 'wysiwyg span10', 'rows' => 8)
+                'attr' => array('class' => 'wysiwyg', 'rows' => 8)
             ))
             ->add('position')
         ;

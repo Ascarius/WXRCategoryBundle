@@ -14,7 +14,6 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/framework-bundle": "2.1.*",
-        "gedmo/doctrine-extensions": "dev-master",
         "stof/doctrine-extensions-bundle": "dev-master",
         "wxr/common-bundle": "dev-master"
     },

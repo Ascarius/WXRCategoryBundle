@@ -6,8 +6,7 @@ Installation
 
 ### DoctrineExtensions
 
-Category need sluggable behavior to build its unique slug from its name.
-Use **YML** mapping.
+Category and Tag need sluggable behavior to build unique slug from name.
 
 -   [StofDoctrineExtensionsBundle documentation](github.com/stof/StofDoctrineExtensionsBundle)
 -   [DoctrineExtensions documentation](github.com/l3pp4rd/DoctrineExtensions)
