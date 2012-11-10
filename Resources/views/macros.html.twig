@@ -1,0 +1,28 @@
+{% macro tags_list(tags, separator, prefix, suffix) %}
+{% spaceless %}
+{% set separator = separator|default(', ') %}
+    {% if tags %}
+        {{ prefix|raw }}
+        {% for tag in tags %}
+            {{ tag.name }}{{ loop.last ? '' : separator|raw }}
+        {% endfor %}
+        {{ suffix|raw }}
+    {% endif %}
+{% endspaceless %}
+{% endmacro %}
+
+{% macro tags_links_list(tags, route, routeArgs, separator, prefix, suffix) %}
+{% spaceless %}
+{% set route = route|default(app.request.get('_route')) %}
+{% set routeArgs = routeArgs|default({}) %}
+{% set separator = separator|default(', ') %}
+    {% if tags %}
+        {{ prefix|raw }}
+        {% for tag in tags %}
+            {% set args = routeArgs %}
+            <a href="{{ path(route, routeArgs|merge({ slug: tag.slug })) }}">{{ tag.name }}</a>{{ loop.last ? '' : separator|raw }}
+        {% endfor %}
+        {{ suffix|raw }}
+    {% endif %}
+{% endspaceless %}
+{% endmacro %}
