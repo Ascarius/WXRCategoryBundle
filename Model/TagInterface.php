@@ -42,6 +42,36 @@ interface TagInterface
     public function getSlug();
 
     /**
+     * Set created at
+     *
+     * @param \DateTime $createdAt
+     * @return TagInterface
+     */
+    public function setCreatedAt(\DateTime $createdAt);
+
+    /**
+     * Get created at
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt();
+
+    /**
+     * Set updated at
+     *
+     * @param \DateTime $updatedAt
+     * @return TagInterface
+     */
+    public function setUpdatedAt(\DateTime $updatedAt);
+
+    /**
+     * Get updated at
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt();
+
+    /**
      * @return string
      */
     public function __toString();

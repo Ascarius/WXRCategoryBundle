@@ -14,3 +14,11 @@ WXR\CategoryBundle\Entity\BaseTag:
             length: 255
             gedmo:
                 slug: { fields: [ name ] }
+        createdAt:
+            column: created_at
+            type: datetime
+        updatedAt:
+            column: updated_at
+            type: datetime
+    lifecycleCallbacks:
+        preUpdate: [ onPreUpdate ]

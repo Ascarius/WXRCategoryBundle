@@ -13,4 +13,11 @@ interface TagManagerInterface extends BaseManagerInterface
      * @return TagInterface|null
      */
     public function findOneBySlug($slug);
+
+    /**
+     * Find last updated
+     *
+     * @return TagInterface|null
+     */
+    public function findLastUpdated();
 }

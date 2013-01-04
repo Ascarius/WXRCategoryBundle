@@ -11,4 +11,11 @@ use WXR\CategoryBundle\Model\Tag;
  */
 abstract class BaseTag extends Tag
 {
+    /**
+     * Update updatedAt
+     */
+    public function onPreUpdate()
+    {
+        $this->updatedAt = new \DateTime();
+    }
 }

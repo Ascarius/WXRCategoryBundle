@@ -19,8 +19,22 @@ abstract class Tag implements TagInterface
      */
     protected $slug;
 
+    /**
+     * @var \DateTime
+     */
+    protected $createdAt;
 
-    public function __construct() {}
+    /**
+     * @var \DateTime
+     */
+    protected $updatedAt;
+
+
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime();
+        $this->updatedAt = new \DateTime();
+    }
 
     /**
      * {@inheritDoc}
@@ -64,6 +78,42 @@ abstract class Tag implements TagInterface
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setCreatedAt(\DateTime $createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setUpdatedAt(\DateTime $updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
     }
 
     /**

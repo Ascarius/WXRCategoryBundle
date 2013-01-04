@@ -11,4 +11,11 @@ use WXR\CategoryBundle\Model\Category;
  */
 abstract class BaseCategory extends Category
 {
+    /**
+     * Update updatedAt
+     */
+    public function onPreUpdate()
+    {
+        $this->updatedAt = new \DateTime();
+    }
 }

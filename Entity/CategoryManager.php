@@ -20,6 +20,24 @@ class CategoryManager extends BaseManager implements CategoryManagerInterface
     /**
      * {@inheritDoc}
      */
+    public function findLastUpdated()
+    {
+        $category = $this->findBy(
+            array(),
+            array('updatedAt' => 'DESC'),
+            1
+        );
+
+        if ($category) {
+            return current($category);
+        }
+
+        return null;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     protected function buildOrderClause(QueryBuilder $qb, array $orderBy = null)
     {
         if (!$orderBy) {

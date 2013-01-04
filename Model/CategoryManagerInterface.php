@@ -13,4 +13,11 @@ interface CategoryManagerInterface extends BaseManagerInterface
      * @return CategoryInterface|null
      */
     public function findOneBySlug($slug);
+
+    /**
+     * Find last updated
+     *
+     * @return CategoryInterface|null
+     */
+    public function findLastUpdated();
 }

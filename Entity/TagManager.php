@@ -20,6 +20,24 @@ class TagManager extends BaseManager implements TagManagerInterface
     /**
      * {@inheritDoc}
      */
+    public function findLastUpdated()
+    {
+        $tag = $this->findBy(
+            array(),
+            array('updatedAt' => 'DESC'),
+            1
+        );
+
+        if ($tag) {
+            return current($tag);
+        }
+
+        return null;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     protected function buildOrderClause(QueryBuilder $qb, array $orderBy = null)
     {
         if (!$orderBy) {

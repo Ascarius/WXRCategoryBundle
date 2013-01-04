@@ -21,3 +21,11 @@ WXR\CategoryBundle\Entity\BaseCategory:
         description:
             type: text
             nullable: true
+        createdAt:
+            column: created_at
+            type: datetime
+        updatedAt:
+            column: updated_at
+            type: datetime
+    lifecycleCallbacks:
+        preUpdate: [ onPreUpdate ]
